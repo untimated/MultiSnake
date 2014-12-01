@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20C795B1A2C3AC80002E40B /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20C795A1A2C3AC80002E40B /* libRaknet.a */; };
 		B215ACB019F689630094452D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B215ACAF19F689630094452D /* main.cpp */; };
-		B215ACB719F6898A0094452D /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B215ACB619F6898A0094452D /* libRaknet.a */; };
 		B215ACBB19F768430094452D /* libcurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B215ACBA19F768430094452D /* libcurses.dylib */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +25,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B20C795A1A2C3AC80002E40B /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
 		B215ACAC19F689630094452D /* Snake_Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Snake_Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		B215ACAF19F689630094452D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		B215ACB619F6898A0094452D /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
 		B215ACBA19F768430094452D /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -37,7 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B215ACBB19F768430094452D /* libcurses.dylib in Frameworks */,
-				B215ACB719F6898A0094452D /* libRaknet.a in Frameworks */,
+				B20C795B1A2C3AC80002E40B /* libRaknet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +47,8 @@
 		B215ACA319F689620094452D = {
 			isa = PBXGroup;
 			children = (
+				B20C795A1A2C3AC80002E40B /* libRaknet.a */,
 				B215ACBA19F768430094452D /* libcurses.dylib */,
-				B215ACB619F6898A0094452D /* libRaknet.a */,
 				B215ACAE19F689630094452D /* Snake_Client */,
 				B215ACAD19F689630094452D /* Products */,
 			);
