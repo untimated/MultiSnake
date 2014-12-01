@@ -4,7 +4,7 @@
 //
 //  Created by Michael Herman on 10/10/14.
 //  Copyright (c) 2014 Michael Herman. All rights reserved.
-//
+// Client
 
 #include <iostream>
 #include <ncurses.h>
@@ -17,6 +17,7 @@
 #include "BitStream.h"
 #include "RakSleep.h"
 #include "PacketLogger.h"
+
 
 
 
@@ -51,6 +52,7 @@ struct __attribute__((packed)) message2{
 //Functions Prototype
 void IntroText();
 void Render();
+int kbhit(void);
 void initVar();
 unsigned char GetPacketIdentifier(RakNet::Packet *p);
 
@@ -58,6 +60,8 @@ unsigned char GetPacketIdentifier(RakNet::Packet *p);
 int main(int argc, const char * argv[]) {
     initVar();
     initscr();
+
+    nodelay(stdscr, FALSE);
     keypad(stdscr, TRUE);
     RakNet::Packet* p;
     
@@ -116,10 +120,10 @@ int main(int argc, const char * argv[]) {
     
     int ch = getch();
     clear();
-    
+    nodelay(stdscr, TRUE);
     while(1)
     {
-        
+        RakSleep(10);
         for(p=client->Receive(); p; client->DeallocatePacket(p), p=client->Receive())
         {
             // We got a packet, get the identifier with our handy function
@@ -130,7 +134,7 @@ int main(int argc, const char * argv[]) {
             {
                 {
                 case 101:
-                    Render();
+                    
                     printw("BroadCast from Server !\n");
                     struct message2 *serverMessage = (struct message2*) p->data;
                     playerOneGlobalX = serverMessage->info[0];
@@ -202,38 +206,43 @@ int main(int argc, const char * argv[]) {
             }
         }
         
-
-        ch = getch();
-        clear();
-        
-        switch (ch)
+        if(kbhit())
         {
-            case KEY_DOWN:
-                clientMessage.posY++;
-                printw("%s\n","KEY_UP");
-                //printw("Pos X :%i , Pos Y : %i\n",playerOneGlobalX, playerOneGlobalY);
-                printw("Pos X :%i , Pos Y : %i\n",clientMessage.posX, clientMessage.posY);
-                refresh();
-                break;
-            case KEY_RIGHT:
-                printw("%s\n","KEY_RIGHT");
-                clientMessage.posX++;
-                //printw("Pos X :%i , Pos Y : %i\n",playerOneGlobalX, playerOneGlobalY);
-                printw("Pos X :%i , Pos Y : %i\n",clientMessage.posX, clientMessage.posY);
-                refresh();
-                break;
-            default:
-                printw("nothing");
-                refresh();
-                break;
+            ch = getch();
+            switch (ch)
+            {
+                case KEY_DOWN:
+                    clientMessage.posY++;
+                    printw("%s\n","KEY_UP");
+                    printw("Pos X :%i , Pos Y : %i\n",clientMessage.posX, clientMessage.posY);
+                    
+                    break;
+                case KEY_RIGHT:
+                    printw("%s\n","KEY_RIGHT");
+                    clientMessage.posX++;
+                    //printw("Pos X :%i , Pos Y : %i\n",playerOneGlobalX, playerOneGlobalY);
+                    printw("Pos X :%i , Pos Y : %i\n",clientMessage.posX, clientMessage.posY);
+                    
+                    break;
+                default:
+                    
+                    break;
+            }
+            void* ptr = (void*)&clientMessage;
+            char *text = (char*)ptr;
+            client->Send(text, (const int)sizeof(text), HIGH_PRIORITY, RELIABLE_ORDERED, 0, serverID, false);
+        }else{
+            clear();
+            Render();
         }
-        void* ptr = (void*)&clientMessage;
-        char *text = (char*)ptr;
-        client->Send(text, (const int)sizeof(text), HIGH_PRIORITY, RELIABLE_ORDERED, 0, serverID, false);
-        //RakSleep(10);
-
         
+
+
+
+        //RakSleep(10);
     }
+    
+    
     client->Shutdown(0);
     return 0;
 }
@@ -249,6 +258,19 @@ void initVar()
     //Id for client packet is 100
     clientMessage.typeId = 100;
 }
+
+int kbhit(void)
+{
+    int ch = getch();
+    
+    if (ch != ERR) {
+        ungetch(ch);
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 void Render()
 {
     for(int i = 0; i<= 20; i++)

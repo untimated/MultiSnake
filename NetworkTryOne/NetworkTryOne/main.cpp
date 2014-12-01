@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
     cout << "wait..." <<endl;
 
     while(1){
-        
+        RakSleep(10);
 
         for (packet=server->Receive(); packet; server->DeallocatePacket(packet), packet=server->Receive()) {
     
