@@ -4,7 +4,7 @@
 //
 //  Created by Michael Herman on 10/10/14.
 //  Copyright (c) 2014 Michael Herman. All rights reserved.
-//
+// Client
 
 #include <iostream>
 #include <ncurses.h>
