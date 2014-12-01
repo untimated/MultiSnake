@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B20C795F1A2C61C90002E40B /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20C795E1A2C61C90002E40B /* libRaknet.a */; };
+		B215ACB919F698DF0094452D /* libcurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B215ACB819F698DF0094452D /* libcurses.dylib */; };
+		B24B160C19E7B5BE00D4BEEE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B24B160B19E7B5BE00D4BEEE /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B24B160619E7B5BE00D4BEEE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B20C795E1A2C61C90002E40B /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
+		B215ACB819F698DF0094452D /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
+		B24B160819E7B5BE00D4BEEE /* NetworkTryTwo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkTryTwo; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24B160B19E7B5BE00D4BEEE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B24B160519E7B5BE00D4BEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B215ACB919F698DF0094452D /* libcurses.dylib in Frameworks */,
+				B20C795F1A2C61C90002E40B /* libRaknet.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B24B15FF19E7B5BE00D4BEEE = {
+			isa = PBXGroup;
+			children = (
+				B20C795E1A2C61C90002E40B /* libRaknet.a */,
+				B215ACB819F698DF0094452D /* libcurses.dylib */,
+				B24B160A19E7B5BE00D4BEEE /* NetworkTryTwo */,
+				B24B160919E7B5BE00D4BEEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B24B160919E7B5BE00D4BEEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B24B160819E7B5BE00D4BEEE /* NetworkTryTwo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B24B160A19E7B5BE00D4BEEE /* NetworkTryTwo */ = {
+			isa = PBXGroup;
+			children = (
+				B24B160B19E7B5BE00D4BEEE /* main.cpp */,
+			);
+			path = NetworkTryTwo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B24B160719E7B5BE00D4BEEE /* NetworkTryTwo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24B160F19E7B5BE00D4BEEE /* Build configuration list for PBXNativeTarget "NetworkTryTwo" */;
+			buildPhases = (
+				B24B160419E7B5BE00D4BEEE /* Sources */,
+				B24B160519E7B5BE00D4BEEE /* Frameworks */,
+				B24B160619E7B5BE00D4BEEE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkTryTwo;
+			productName = NetworkTryTwo;
+			productReference = B24B160819E7B5BE00D4BEEE /* NetworkTryTwo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B24B160019E7B5BE00D4BEEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Michael Herman";
+				TargetAttributes = {
+					B24B160719E7B5BE00D4BEEE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = B24B160319E7B5BE00D4BEEE /* Build configuration list for PBXProject "NetworkTryTwo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B24B15FF19E7B5BE00D4BEEE;
+			productRefGroup = B24B160919E7B5BE00D4BEEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B24B160719E7B5BE00D4BEEE /* NetworkTryTwo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B24B160419E7B5BE00D4BEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24B160C19E7B5BE00D4BEEE /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B24B160D19E7B5BE00D4BEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B24B160E19E7B5BE00D4BEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B24B161019E7B5BE00D4BEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../Raknet/Source\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug",
+					/Users/michaelherman/Documents/College/Semester,
+					5/Advance,
+					Game,
+					"Design/RaknetTest/MultiSnake/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B24B161119E7B5BE00D4BEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../Raknet/Source\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug",
+					/Users/michaelherman/Documents/College/Semester,
+					5/Advance,
+					Game,
+					"Design/RaknetTest/MultiSnake/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B24B160319E7B5BE00D4BEEE /* Build configuration list for PBXProject "NetworkTryTwo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24B160D19E7B5BE00D4BEEE /* Debug */,
+				B24B160E19E7B5BE00D4BEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24B160F19E7B5BE00D4BEEE /* Build configuration list for PBXNativeTarget "NetworkTryTwo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24B161019E7B5BE00D4BEEE /* Debug */,
+				B24B161119E7B5BE00D4BEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B24B160019E7B5BE00D4BEEE /* Project object */;
+}

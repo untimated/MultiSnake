@@ -1,0 +1,274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B20C79611A2C62B00002E40B /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20C79601A2C62B00002E40B /* libRaknet.a */; };
+		B232638819E5096B00CB45CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B232638719E5096B00CB45CB /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B232638219E5096B00CB45CB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B20C79601A2C62B00002E40B /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
+		B232638419E5096B00CB45CB /* NetworkTryOne */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkTryOne; sourceTree = BUILT_PRODUCTS_DIR; };
+		B232638719E5096B00CB45CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B232638119E5096B00CB45CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20C79611A2C62B00002E40B /* libRaknet.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B232637B19E5096B00CB45CB = {
+			isa = PBXGroup;
+			children = (
+				B20C79601A2C62B00002E40B /* libRaknet.a */,
+				B232638619E5096B00CB45CB /* NetworkTryOne */,
+				B232638519E5096B00CB45CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B232638519E5096B00CB45CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B232638419E5096B00CB45CB /* NetworkTryOne */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B232638619E5096B00CB45CB /* NetworkTryOne */ = {
+			isa = PBXGroup;
+			children = (
+				B232638719E5096B00CB45CB /* main.cpp */,
+			);
+			path = NetworkTryOne;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B232638319E5096B00CB45CB /* NetworkTryOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B232638B19E5096B00CB45CB /* Build configuration list for PBXNativeTarget "NetworkTryOne" */;
+			buildPhases = (
+				B232638019E5096B00CB45CB /* Sources */,
+				B232638119E5096B00CB45CB /* Frameworks */,
+				B232638219E5096B00CB45CB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkTryOne;
+			productName = NetworkTryOne;
+			productReference = B232638419E5096B00CB45CB /* NetworkTryOne */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B232637C19E5096B00CB45CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Michael Herman";
+				TargetAttributes = {
+					B232638319E5096B00CB45CB = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = B232637F19E5096B00CB45CB /* Build configuration list for PBXProject "NetworkTryOne" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B232637B19E5096B00CB45CB;
+			productRefGroup = B232638519E5096B00CB45CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B232638319E5096B00CB45CB /* NetworkTryOne */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B232638019E5096B00CB45CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B232638819E5096B00CB45CB /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B232638919E5096B00CB45CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B232638A19E5096B00CB45CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B232638C19E5096B00CB45CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Raknet/Source\"";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug",
+					/Users/michaelherman/Documents/College/Semester,
+					5/Advance,
+					Game,
+					"Design/RaknetTest/MultiSnake/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+			};
+			name = Debug;
+		};
+		B232638D19E5096B00CB45CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Raknet/Source\"";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug",
+					/Users/michaelherman/Documents/College/Semester,
+					5/Advance,
+					Game,
+					"Design/RaknetTest/MultiSnake/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B232637F19E5096B00CB45CB /* Build configuration list for PBXProject "NetworkTryOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B232638919E5096B00CB45CB /* Debug */,
+				B232638A19E5096B00CB45CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B232638B19E5096B00CB45CB /* Build configuration list for PBXNativeTarget "NetworkTryOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B232638C19E5096B00CB45CB /* Debug */,
+				B232638D19E5096B00CB45CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B232637C19E5096B00CB45CB /* Project object */;
+}

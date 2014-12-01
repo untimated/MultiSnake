@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CFE2538F-DDF7-4BA1-AB52-1B612E90E91F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NetworkTryTwo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7CD8AD1C3B6AED03B6A8F185CB1FCB9308A314F4</key>
+		<string>https://github.com/untimated/MultiSnake.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NetworkTryTwo/NetworkTryTwo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7CD8AD1C3B6AED03B6A8F185CB1FCB9308A314F4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/untimated/MultiSnake.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7CD8AD1C3B6AED03B6A8F185CB1FCB9308A314F4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7CD8AD1C3B6AED03B6A8F185CB1FCB9308A314F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MultiSnake</string>
+		</dict>
+	</array>
+</dict>
+</plist>
