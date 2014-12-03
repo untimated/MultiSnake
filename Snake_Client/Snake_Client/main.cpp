@@ -17,7 +17,7 @@
 #include "BitStream.h"
 #include "RakSleep.h"
 #include "PacketLogger.h"
-#include "Controller.h"
+
 
 #define SERVER_PORT 7001
 
@@ -34,7 +34,6 @@ unsigned char packetIdentifier;
 SystemAddress serverID;
 char ipAddr[15];
 char PORT[10];
-Controller gameController;
 
 struct __attribute__((packed)) message{
     unsigned char typeId;
@@ -123,7 +122,6 @@ int main(int argc, const char * argv[]) {
     int ch = getch();
     clear();
     nodelay(stdscr, TRUE);
-    
     while(1)
     {
         RakSleep(10);
@@ -140,13 +138,14 @@ int main(int argc, const char * argv[]) {
                     
                     printw("BroadCast from Server !\n");
                     struct message2 *serverMessage = (struct message2*) p->data;
-                    char* tmpServerMessage = (char *) serverMessage;
-                    gameController.updateModel(tmpServerMessage);
-                    /*playerOneGlobalX = serverMessage->info[0];
+                    playerOneGlobalX = serverMessage->info[0];
                     playerOneGlobalY = serverMessage->info[1];
                     playerTwoGlobalX = serverMessage->info[2];
                     playerTwoGlobalY = serverMessage->info[3];
-                    */
+                    
+                    printw("info 3: %i, info 4 :%i\n", playerTwoGlobalX,playerTwoGlobalY);
+                    printw("%i, %i, %i, %i",serverMessage->info[0],serverMessage->info[1],serverMessage->info[2],serverMessage->info[3]);
+                    refresh();
                     break;
                 }
                 case ID_DISCONNECTION_NOTIFICATION:
@@ -211,7 +210,6 @@ int main(int argc, const char * argv[]) {
         if(kbhit())
         {
             ch = getch();
-            gameController.handleEvent(ch);
             switch (ch)
             {
                 case KEY_DOWN:
@@ -231,7 +229,6 @@ int main(int argc, const char * argv[]) {
                     
                     break;
             }
-            
             void* ptr = (void*)&clientMessage;
             char *text = (char*)ptr;
             client->Send(text, (const int)sizeof(text), HIGH_PRIORITY, RELIABLE_ORDERED, 0, serverID, false);
@@ -256,7 +253,6 @@ void initVar()
     
     //Id for client packet is 100
     clientMessage.typeId = 100;
-    gameController = *new Controller();
 }
 
 int kbhit(void)
