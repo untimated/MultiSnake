@@ -19,10 +19,8 @@
 #include "PacketLogger.h"
 
 
-
-
 #define SERVER_PORT 7001
-#define CLIENT_PORT 9001
+
 
 using namespace RakNet;
 using namespace std;
@@ -35,6 +33,7 @@ unsigned char playerTwoGlobalY;
 unsigned char packetIdentifier;
 SystemAddress serverID;
 char ipAddr[15];
+char PORT[10];
 
 struct __attribute__((packed)) message{
     unsigned char typeId;
@@ -70,13 +69,15 @@ int main(int argc, const char * argv[]) {
     addstr("ENTER IP TO CONNECT : ");
     refresh();
     getnstr(ipAddr, sizeof(ipAddr));
-    printw("%s",ipAddr);
     refresh();
+    addstr("ENTER Client Port : ");
+    refresh();
+    getnstr(PORT, sizeof(PORT));
     clear();
     
     
     RakNet::SocketDescriptor socket;
-    socket.port = CLIENT_PORT;
+    socket.port = atoi(PORT);
     strcpy(socket.hostAddress, ipAddr);
     
     bool isClientStarted = (client->Startup(1, &socket, 1)==RAKNET_STARTED);
@@ -235,11 +236,6 @@ int main(int argc, const char * argv[]) {
             clear();
             Render();
         }
-        
-        
-        
-        
-        //RakSleep(10);
     }
     
     
