@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B209D7181A2EBB8900033021 /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B209D7161A2EBB8900033021 /* Snake.cpp */; };
+		B209D71B1A2EBB9400033021 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B209D7191A2EBB9400033021 /* Controller.cpp */; };
+		B209D71E1A2EBBA200033021 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B209D71C1A2EBBA200033021 /* Renderer.cpp */; };
 		B20C795D1A2C592C0002E40B /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20C795C1A2C592C0002E40B /* libRaknet.a */; };
 		B215ACB019F689630094452D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B215ACAF19F689630094452D /* main.cpp */; };
 		B215ACBB19F768430094452D /* libcurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B215ACBA19F768430094452D /* libcurses.dylib */; };
@@ -25,6 +28,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B209D7161A2EBB8900033021 /* Snake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Snake.cpp; sourceTree = "<group>"; };
+		B209D7171A2EBB8900033021 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
+		B209D7191A2EBB9400033021 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		B209D71A1A2EBB9400033021 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		B209D71C1A2EBBA200033021 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		B209D71D1A2EBBA200033021 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		B20C795C1A2C592C0002E40B /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
 		B215ACAC19F689630094452D /* Snake_Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Snake_Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		B215ACAF19F689630094452D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -66,6 +75,12 @@
 			isa = PBXGroup;
 			children = (
 				B215ACAF19F689630094452D /* main.cpp */,
+				B209D7161A2EBB8900033021 /* Snake.cpp */,
+				B209D7171A2EBB8900033021 /* Snake.h */,
+				B209D7191A2EBB9400033021 /* Controller.cpp */,
+				B209D71A1A2EBB9400033021 /* Controller.h */,
+				B209D71C1A2EBBA200033021 /* Renderer.cpp */,
+				B209D71D1A2EBBA200033021 /* Renderer.h */,
 			);
 			path = Snake_Client;
 			sourceTree = "<group>";
@@ -126,6 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B209D71E1A2EBBA200033021 /* Renderer.cpp in Sources */,
+				B209D7181A2EBB8900033021 /* Snake.cpp in Sources */,
+				B209D71B1A2EBB9400033021 /* Controller.cpp in Sources */,
 				B215ACB019F689630094452D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
