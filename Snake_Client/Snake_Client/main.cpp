@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <ncurses.h>
+#include <string>
+#include "Controller.h"
 #include "MessageIdentifiers.h"
 
 #include "RakPeerInterface.h"
@@ -31,7 +33,9 @@ unsigned char playerOneGlobalY;
 unsigned char playerTwoGlobalX;
 unsigned char playerTwoGlobalY;
 unsigned char packetIdentifier;
+Controller gameController;
 SystemAddress serverID;
+RakNet::RakPeerInterface *client;
 char ipAddr[15];
 char PORT[10];
 
@@ -41,7 +45,6 @@ struct __attribute__((packed)) message{
     unsigned char posY;
 }clientMessage;
 
-
 struct __attribute__((packed)) message2{
     unsigned char typeId;
     unsigned char info[4];
@@ -50,7 +53,7 @@ struct __attribute__((packed)) message2{
 
 //Functions Prototype
 void IntroText();
-void Render();
+void draw(std::string d);
 int kbhit(void);
 void initVar();
 unsigned char GetPacketIdentifier(RakNet::Packet *p);
@@ -65,7 +68,7 @@ int main(int argc, const char * argv[]) {
     RakNet::Packet* p;
     
     /*Setup Client - Server Connection*/
-    RakNet::RakPeerInterface *client=RakNet::RakPeerInterface::GetInstance();
+    
     addstr("ENTER IP TO CONNECT : ");
     refresh();
     getnstr(ipAddr, sizeof(ipAddr));
@@ -75,7 +78,7 @@ int main(int argc, const char * argv[]) {
     getnstr(PORT, sizeof(PORT));
     clear();
     
-    
+    {
     RakNet::SocketDescriptor socket;
     socket.port = atoi(PORT);
     strcpy(socket.hostAddress, ipAddr);
@@ -112,16 +115,16 @@ int main(int argc, const char * argv[]) {
         printw("Client GUID : %s\n",client->GetGuidFromSystemAddress(serverID).ToString());refresh();
         printw("Client Address : %s\n",client->GetSystemAddressFromGuid(client->GetMyGUID()).ToString());refresh();
     }
-    
+    }
     
     IntroText();
     refresh();
-    clientMessage.typeId = 100;
     
     
     int ch = getch();
     clear();
     nodelay(stdscr, TRUE);
+    
     while(1)
     {
         RakSleep(10);
@@ -135,16 +138,9 @@ int main(int argc, const char * argv[]) {
             {
                 {
                 case 101:
-                    
                     printw("BroadCast from Server !\n");
-                    struct message2 *serverMessage = (struct message2*) p->data;
-                    playerOneGlobalX = serverMessage->info[0];
-                    playerOneGlobalY = serverMessage->info[1];
-                    playerTwoGlobalX = serverMessage->info[2];
-                    playerTwoGlobalY = serverMessage->info[3];
-                    
-                    printw("info 3: %i, info 4 :%i\n", playerTwoGlobalX,playerTwoGlobalY);
-                    printw("%i, %i, %i, %i",serverMessage->info[0],serverMessage->info[1],serverMessage->info[2],serverMessage->info[3]);
+                    //struct message2 *serverMessage = (struct message2*) p->data;
+                    gameController.updateWorld(p->data);
                     refresh();
                     break;
                 }
@@ -209,32 +205,21 @@ int main(int argc, const char * argv[]) {
         
         if(kbhit())
         {
+            clear();
             ch = getch();
-            switch (ch)
-            {
-                case KEY_DOWN:
-                    clientMessage.posY++;
-                    printw("%s\n","KEY_UP");
-                    printw("Pos X :%i , Pos Y : %i\n",clientMessage.posX, clientMessage.posY);
-                    
-                    break;
-                case KEY_RIGHT:
-                    printw("%s\n","KEY_RIGHT");
-                    clientMessage.posX++;
-                    //printw("Pos X :%i , Pos Y : %i\n",playerOneGlobalX, playerOneGlobalY);
-                    printw("Pos X :%i , Pos Y : %i\n",clientMessage.posX, clientMessage.posY);
-                    
-                    break;
-                default:
-                    
-                    break;
-            }
-            void* ptr = (void*)&clientMessage;
-            char *text = (char*)ptr;
-            client->Send(text, (const int)sizeof(text), HIGH_PRIORITY, RELIABLE_ORDERED, 0, serverID, false);
+            gameController.proccessEvent(ch,PORT);
+            char* txt = gameController.returnSnakeData(PORT);
+            /*struct message* test = (struct message*)txt;
+            printw(" txt X: %u \n",test->posX);
+            printw(" txt Y: %u \n",test->posY);
+            printw(" x1 : %u \n",gameController.getSnakeX(PORT));
+            printw(" x2 : %u",gameController.getSnakeY(PORT));
+            refresh();*/
+            client->Send(txt, (const int)sizeof(txt), HIGH_PRIORITY, RELIABLE_ORDERED, 0, serverID, false);
         }else{
             clear();
-            Render();
+            draw(gameController.renderWorld());
+            refresh();
         }
     }
     
@@ -250,7 +235,8 @@ void initVar()
     playerTwoGlobalY = 0;
     clientMessage.posX = 0;
     clientMessage.posY = 0;
-    
+    gameController = *new Controller();
+    client = RakNet::RakPeerInterface::GetInstance();
     //Id for client packet is 100
     clientMessage.typeId = 100;
 }
@@ -267,28 +253,9 @@ int kbhit(void)
     }
 }
 
-void Render()
+void draw(std::string d)
 {
-    for(int i = 0; i<= 20; i++)
-    {
-        for(int j = 0; j<=30; j++)
-        {
-            if((i == playerOneGlobalY)&&(j==playerOneGlobalX))
-            {
-                printw("%s",">");
-            }else{
-                printw("%s","_");
-            }
-            
-            if((i == playerTwoGlobalY)&&(j==playerTwoGlobalX))
-            {
-                printw("%s","<");
-            }else{
-                printw("%s","_");
-            }
-        }
-        printw("\n");
-    }
+    printw(d.c_str());
     refresh();
 }
 

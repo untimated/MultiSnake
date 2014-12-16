@@ -64,7 +64,7 @@ int main(int argc, const char * argv[]) {
     cout<<server->GetSystemAddressFromGuid(server->GetMyGUID()).ToString()<<endl;
     cout<<"GUID :: "<< server->GetMyGUID().ToString()<<endl;
     if(!b){
-        puts("re-Attempt\n");
+        printf("re-Attempt\n");
         b = server->Startup(4,sdArray,1)==RAKNET_STARTED;
         cout<<server->GetSystemAddressFromGuid(server->GetMyGUID()).ToString()<<endl;
         cout<<b;
@@ -103,6 +103,7 @@ int main(int argc, const char * argv[]) {
                         cout<<"port 9000 in"<<endl;
                         broadcastInfo.info[0] = tmp->posX;
                         broadcastInfo.info[1] = tmp->posY;
+
                     }
                     if(packet->systemAddress.GetPort()==9001){
                         cout<<"port 9001 in"<<endl;

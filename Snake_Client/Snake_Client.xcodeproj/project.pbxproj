@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B20C795D1A2C592C0002E40B /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20C795C1A2C592C0002E40B /* libRaknet.a */; };
+		B20DA9771A35A54300C57E33 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20DA9751A35A54300C57E33 /* Controller.cpp */; };
+		B20DA97A1A35A55500C57E33 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20DA9781A35A55500C57E33 /* Renderer.cpp */; };
 		B215ACB019F689630094452D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B215ACAF19F689630094452D /* main.cpp */; };
-		B215ACBB19F768430094452D /* libcurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B215ACBA19F768430094452D /* libcurses.dylib */; };
+		B220DAEC1A3C7D5400178A91 /* libncurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B220DAEB1A3C7D5400178A91 /* libncurses.dylib */; };
+		B220DAEE1A3C7D6200178A91 /* libRaknet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B220DAED1A3C7D6200178A91 /* libRaknet.a */; };
+		B23E46131A3F279900262521 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B23E46121A3F279900262521 /* libc++.dylib */; };
+		B2807E851A2EE36C00A9DC3E /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2807E831A2EE36C00A9DC3E /* Snake.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +29,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B20C795C1A2C592C0002E40B /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
+		B20DA9751A35A54300C57E33 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		B20DA9761A35A54300C57E33 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		B20DA9781A35A55500C57E33 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		B20DA9791A35A55500C57E33 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		B215ACAC19F689630094452D /* Snake_Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Snake_Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		B215ACAF19F689630094452D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		B215ACBA19F768430094452D /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
+		B220DAEB1A3C7D5400178A91 /* libncurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.dylib; path = usr/lib/libncurses.dylib; sourceTree = SDKROOT; };
+		B220DAED1A3C7D6200178A91 /* libRaknet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRaknet.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug/libRaknet.a"; sourceTree = "<group>"; };
+		B23E46121A3F279900262521 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		B2807E831A2EE36C00A9DC3E /* Snake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Snake.cpp; sourceTree = "<group>"; };
+		B2807E841A2EE36C00A9DC3E /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B215ACBB19F768430094452D /* libcurses.dylib in Frameworks */,
-				B20C795D1A2C592C0002E40B /* libRaknet.a in Frameworks */,
+				B23E46131A3F279900262521 /* libc++.dylib in Frameworks */,
+				B220DAEC1A3C7D5400178A91 /* libncurses.dylib in Frameworks */,
+				B220DAEE1A3C7D6200178A91 /* libRaknet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +59,9 @@
 		B215ACA319F689620094452D = {
 			isa = PBXGroup;
 			children = (
-				B20C795C1A2C592C0002E40B /* libRaknet.a */,
-				B215ACBA19F768430094452D /* libcurses.dylib */,
+				B23E46121A3F279900262521 /* libc++.dylib */,
+				B220DAED1A3C7D6200178A91 /* libRaknet.a */,
+				B220DAEB1A3C7D5400178A91 /* libncurses.dylib */,
 				B215ACAE19F689630094452D /* Snake_Client */,
 				B215ACAD19F689630094452D /* Products */,
 			);
@@ -66,6 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				B215ACAF19F689630094452D /* main.cpp */,
+				B2807E831A2EE36C00A9DC3E /* Snake.cpp */,
+				B2807E841A2EE36C00A9DC3E /* Snake.h */,
+				B20DA9751A35A54300C57E33 /* Controller.cpp */,
+				B20DA9761A35A54300C57E33 /* Controller.h */,
+				B20DA9781A35A55500C57E33 /* Renderer.cpp */,
+				B20DA9791A35A55500C57E33 /* Renderer.h */,
 			);
 			path = Snake_Client;
 			sourceTree = "<group>";
@@ -126,6 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20DA97A1A35A55500C57E33 /* Renderer.cpp in Sources */,
+				B2807E851A2EE36C00A9DC3E /* Snake.cpp in Sources */,
+				B20DA9771A35A54300C57E33 /* Controller.cpp in Sources */,
 				B215ACB019F689630094452D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,17 +236,11 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/**",
 					"\"$(SRCROOT)/../Raknet/Source\"",
+					"\"$(SRCROOT)/Snake_Client\"",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug",
-					/Users/michaelherman/Documents/College/Semester,
-					5/Advance,
-					Game,
-					"Design/RaknetTest/MultiSnake/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug",
-				);
+				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -236,17 +252,11 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/**",
 					"\"$(SRCROOT)/../Raknet/Source\"",
+					"\"$(SRCROOT)/Snake_Client\"",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-gwkkbydmwzdlaxehclybgzejpokt/Build/Products/Debug",
-					/Users/michaelherman/Documents/College/Semester,
-					5/Advance,
-					Game,
-					"Design/RaknetTest/MultiSnake/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug",
-				);
+				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Raknet-bswmiythiujhxvcinhjzvldcyvqf/Build/Products/Debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
